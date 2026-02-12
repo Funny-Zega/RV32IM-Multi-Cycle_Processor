@@ -191,7 +191,7 @@ The verification system automatically compares the processor's state with the ex
 
 Notably, the division tests (`riscvTest_043` to `riscvTest_046`) demonstrate higher simulation times due to the 8-cycle stall mechanism, confirming the multi-cycle behavior.
 
-```text
+```markdown
 *********************************************************************************************
 ** TEST                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
 *********************************************************************************************
@@ -250,6 +250,7 @@ Notably, the division tests (`riscvTest_043` to `riscvTest_046`) demonstrate hig
 **********************************************************************************************
 ** TESTS=52 PASS=52 FAIL=0 SKIP=0             64756.05            9.27       6986.73        **
 **********************************************************************************************
+```
 
 
 
