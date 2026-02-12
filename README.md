@@ -36,14 +36,14 @@ Key architectural optimizations include:
 ## <a id="features"></a>3. Key Features
 
 ### Hardware Architecture
-- [cite_start]**RV32I Base ISA:** Supports all core instructions (`LUI`, `AUIPC`, `JAL`, `JALR`, Branch, Load/Store, ALU) [cite: 61-112].
+- **RV32I Base ISA:** Supports all core instructions (`LUI`, `AUIPC`, `JAL`, `JALR`, Branch, Load/Store, ALU).
 - **RV32M Extension (Multi-Cycle):**
-  - [cite_start]**Multiplication:** Supports `MUL`, `MULH`, `MULHSU`, `MULHU` using a combinational multiplier [cite: 173-175].
-  - [cite_start]**Division:** Supports `DIV`, `DIVU`, `REM`, `REMU` using an **8-stage pipeline**[cite: 129, 226].
-- [cite_start]**Stall Mechanism:** The Control Unit automatically freezes the PC and Register File write-enable for **8 clock cycles** during division operations (`div_counter < 8`) to wait for the pipelined result [cite: 137-140].
+  - **Multiplication:** Supports `MUL`, `MULH`, `MULHSU`, `MULHU` using a combinational multiplier.
+  - **Division:** Supports `DIV`, `DIVU`, `REM`, `REMU` using an **8-stage pipeline**.
+- **Stall Mechanism:** The Control Unit automatically freezes the PC and Register File write-enable for **8 clock cycles** during division operations (`div_counter < 8`) to wait for the pipelined result.
 - **Advanced ALU Design:**
-  - [cite_start]**CLA Adder:** A 32-bit adder built from 4-bit (`gp4`) and 8-bit (`gp8`) Lookahead Generation blocks for minimal carry delay [cite: 27-39].
-  - [cite_start]**Pipelined Divider:** 8-stage Unsigned Divider module using iterative subtraction logic [cite: 225-237].
+  - **CLA Adder:** A 32-bit adder built from 4-bit (`gp4`) and 8-bit (`gp8`) Lookahead Generation blocks for minimal carry delay.
+  - **Pipelined Divider:** 8-stage Unsigned Divider module using iterative subtraction logic.
 
 ### Testbench System
 - **Pipeline Verification:** Dedicated tests for the 8-stage divider latency and throughput.
@@ -250,6 +250,7 @@ Notably, the division tests (`riscvTest_043` to `riscvTest_046`) demonstrate hig
 **********************************************************************************************
 ** TESTS=52 PASS=52 FAIL=0 SKIP=0             64756.05            9.27       6986.73        **
 **********************************************************************************************
+
 
 
 
